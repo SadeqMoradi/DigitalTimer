@@ -1,0 +1,5 @@
+set -tmpdir "C:/Documents and Settings/Digital_Timer/xst/projnav.tmp"
+set -xsthdpdir "C:/Documents and Settings/Digital_Timer/xst"
+elaborate
+-ifn Second.prj
+-ifmt mixed

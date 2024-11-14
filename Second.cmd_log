@@ -1,0 +1,6 @@
+vhdtdtfi -prj Digital_Timer -o "C:/Documents and Settings/Digital_Timer/Second.vhi" -module Second -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work SUB_module.vhd -lib work Seconds.vhd 
+xst -intstyle ise -ifn "C:/Documents and Settings/Digital_Timer/Second.xst" -ofn "C:/Documents and Settings/Digital_Timer/Second.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s400-pq208-4 "Second.ngc" Second.ngd  
+map -intstyle ise -p xc3s400-pq208-4 -cm area -ir off -pr off -c 100 -o Second_map.ncd Second.ngd Second.pcf 
+par -w -intstyle ise -ol high -t 1 Second_map.ncd Second.ncd Second.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Second.twx Second.ncd -o Second.twr Second.pcf 
